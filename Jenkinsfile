@@ -14,7 +14,7 @@ pipeline {
                     def scannerHome = tool 'SonarQube'
                     withSonarQubeEnv('SonarQube') {
                         // Updated SonarScanner command
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000"
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://sonarqube:9000"
                     }
                 }
             }
